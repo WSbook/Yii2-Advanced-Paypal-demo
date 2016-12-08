@@ -33,6 +33,7 @@ Yii2-Advanced-Paypal-demo (Sanbox)
     
     
   2 composer require paypal/rest-api-sdk-php 
+  
   3 Copy common>components go to Project.  
   4 Edit file common>components>Paypal.php
   
