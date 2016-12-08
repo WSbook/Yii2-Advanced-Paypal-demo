@@ -1,5 +1,5 @@
-# Yii2-Paypal-basic
-Basic Yii2 paypal (Sanbox)
+# Yii2-Paypal-DEMO
+Yii2-Advanced-Paypal-demo (Sanbox)
 
 # Regis DevPayPal
   - Search sanbox Test Account -> regis
