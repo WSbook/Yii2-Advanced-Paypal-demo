@@ -12,53 +12,35 @@ Basic Yii2 paypal (Sanbox)
   1 yii migrate/create create_transction_paypal
  
    - edit file 
+	 
     public function up()
     {
-       $this->createTable(
-       
-              'transaction_paypal', [ 
-              
-                'id' => $this->primaryKey(),
-                
-                'user_id' => $this->integer(), 
-                
-                'payment_id' => $this->string(100), 
-                
-                'hash' => $this->string(100),  
-                
-                'complete' => $this->integer(1), 
-                
-                'create_time' => $this->string(50), 
-                
-                'update_time' => $this->string(50), 
-                
-                'product_id' => $this->integer(11) 
-                
-              ]
-              
-          );
-          
+       $this->createTable(     
+              'transaction_paypal', [           
+                'id' => $this->primaryKey(),                
+                'user_id' => $this->integer(),                 
+                'payment_id' => $this->string(100),                 
+                'hash' => $this->string(100),                  
+                'complete' => $this->integer(1),                 
+                'create_time' => $this->string(50),                 
+                'update_time' => $this->string(50),                
+                'product_id' => $this->integer(11)                 
+              ]              
+          );          
     }
     
     - yii migrate
     
     
-  2 composer require paypal/rest-api-sdk-php
-  
-  3 Copy common>components go to Project.
-  
+  2 composer require paypal/rest-api-sdk-php 
+  3 Copy common>components go to Project.  
   4 Edit file common>components>Paypal.php
   
-    $apiContext = new \PayPal\Rest\ApiContext(
-    
-            new \PayPal\Auth\OAuthTokenCredential(
-            
-                'ClientID',         // ClientID
-                
-                'ClientSecret'      // ClientSecret
-                
-            )
-            
+    $apiContext = new \PayPal\Rest\ApiContext(    
+            new \PayPal\Auth\OAuthTokenCredential(            
+                'ClientID',         // ClientID                
+                'ClientSecret'      // ClientSecret                
+            )            
         );
         
     - Simple Test 3 Simple
